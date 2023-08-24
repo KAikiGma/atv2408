@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <meta name="theme-color" content="black">
+    <link rel="apple-touch-icon" href="assets/logos/icon-192x192-apple.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Perfil de Lionel Messi</h1>
+        <img src="imagem/Lionel-Messi-Argentina-2022-FIFA-World-Cup_.jpg" alt="Lionel Messi">
+      </header>
+
+      <section>
+        <h2>Informações pessoais</h2>
+        <ul>
+          <li>Nome: Lionel Messi</li>
+          <li>Idade: 36</li>
+          <li>Altura: 1,70 m</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Sobre Messi</h2>
+        <p>É um futebolista argentino que atua como atacante. Atualmente joga pelo Inter Miami e pela Seleção Argentina, onde, atua como capitão, venceu a Copa do Mundo do Catar de 2022.</p>
+      </section>
+
+      <section>
+        <h2>Interesses</h2>
+        <ul>
+          <li>Passar o tempo com a familia</li>
+          <li>Ganhar titulo</li>
+          <li>Viajar</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Realizações</h2>
+        <p>Fui campeão em todas as competições que disputou.</p>
+      </section>
+
+      <footer>
+        <p>
+          Contato:
+          <ul>
+            <li><img src="imagem/317720_social media_tweet_twitter_social_icon.png" alt="twitter"> twitter.com/messi</li>
+            <li><img src="imagem/3225191_app_instagram_logo_media_popular_icon.png" alt="Instagram"> instagram.com/messi</li>
+          </ul>
+        </p>
+      </footer>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            if ('serviceWorker' in navigator) {
+                console.log('has serviceworker');
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('serviceWorker.js')
+                    .then((registration) => {
+                        console.log('Service worker registered.', registration);
+                    });
+                });
+            }
+            else {
+                console.log("Your browser not supports serviceWorkers");
+            }
+        });
+    </script>
+
+</body>
+</html>
