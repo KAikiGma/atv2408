@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="manifest" href="manifest.webmanifest">
     <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <meta name="theme-color" content="black">
+    <link rel="apple-touch-icon" href="assets/logos/icon-192x192-apple.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
@@ -23,7 +30,7 @@
 
       <section>
         <h2>Sobre mim</h2>
-        <p>Sou um futebolista argentino que atuo como atacante. Atualmente jogo pelo Inter Miami e pela Seleção Argentina, onde, atuo como capitão, venc1 a Copa do Mundo do Catar de 2022.</p>
+        <p>Sou um futebolista argentino que atuo como atacante. Atualmente jogo pelo Inter Miami e pela Seleção Argentina, onde, atuo como capitão, venci a Copa do Mundo do Catar de 2022.</p>
       </section>
 
       <section>
@@ -44,11 +51,28 @@
         <p>
           Contato:
           <ul>
-            <li>twitter: twitter.com/messi</li>
-            <li>Instagram: instagram.com/messi</li>
+            <li><img src="imagem/317720_social media_tweet_twitter_social_icon.png" alt="twitter"> twitter.com/messi</li>
+            <li><img src="imagem/3225191_app_instagram_logo_media_popular_icon.png" alt="Instagram"> instagram.com/messi</li>
           </ul>
         </p>
       </footer>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            if ('serviceWorker' in navigator) {
+                console.log('has serviceworker');
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('serviceWorker.js')
+                    .then((registration) => {
+                        console.log('Service worker registered.', registration);
+                    });
+                });
+            }
+            else {
+                console.log("Your browser not supports serviceWorkers");
+            }
+        });
+    </script>
 
 </body>
 </html>
